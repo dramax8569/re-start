@@ -118,8 +118,10 @@ In this task, you will learn how to run an agentless network audit on your EC2 i
     - In the **Amazon Inspector - Assessment Runs** section, choose the **arrow** in the row for the run that you initiated to expand it and access more options for your run.
     - To see the status of the run, choose **Show status**. If you do not see **Show status**, choose **arrow** at the top.
     - To close and return to the previous screen, choose **Close**.
+
 <br>
-[![8.png](https://i.postimg.cc/KRKMwJFF/8.png)](https://postimg.cc/KRKMwJFF)
+
+[![8.png](https://i.postimg.cc/kXsvVppV/8.png)](https://postimg.cc/KRKMwJFF)
 
 26. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
 
