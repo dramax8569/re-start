@@ -201,17 +201,17 @@ You can adjust the inbound rules so that only your IP address is able to access 
     This step runs the same scan from earlier in the lab and produces findings from the security group updates.
     Note: The scan takes approximately 30-60 seconds to complete.
 
-[![15.png](https://i.postimg.cc/GBRTBRDh/15.png)](https://postimg.cc/GBRTBRDh)
+[![15.png](https://i.postimg.cc/5tYBRNNv/15.png)](https://postimg.cc/GBRTBRDh)
 
 38. In the left navigation pane, choose **Assessment runs**, and refresh every 10-15 seconds until the Status changes to **Analysis complete**.
 
-[![16.png](https://i.postimg.cc/0rjMKczm/16.png)](https://postimg.cc/0rjMKczm)
+[![16.png](https://i.postimg.cc/HW4QKNHS/16.png)](https://postimg.cc/0rjMKczm)
 
 39. In the left navigation pane, choose **Findings**, and then choose **Date** to sort by most-recent findings.
 
    The high-severity finding is now gone, but the medium-severity finding remains. Although port 22 was scoped down to allow access to only your IP address, port 22 is still technically open to the internet outside the VPC.
 
-[![17.png](https://i.postimg.cc/KRg1Jjr8/17.png)](https://postimg.cc/KRg1Jjr8)
+[![17.png](https://i.postimg.cc/15vDRN8w/17.png)](https://postimg.cc/KRg1Jjr8)
 
 ### Summary of Task 4
 
@@ -231,21 +231,21 @@ Systems Manager is a secure end-to-end management solution for hybrid cloud envi
 
 43. Choose **Edit inbound rules**.
 
-[![18.png](https://i.postimg.cc/tsQYfb2t/18.png)](https://postimg.cc/tsQYfb2t)
+[![18.png](https://i.postimg.cc/fRkmVTdF/18.png)](https://postimg.cc/tsQYfb2t)
 
 44. Choose **Delete**, and then choose **Save rules** to remove the SSH inbound rule.
 
-[![19.png](https://i.postimg.cc/fVcJQPP4/19.png)](https://postimg.cc/fVcJQPP4)
+[![19.png](https://i.postimg.cc/Z5g3ptFq/19.png)](https://postimg.cc/fVcJQPP4)
 
 45. In the left navigation pane, choose **Instances**.
 
 46. Select the check box for BastionServer. Then choose the **Instance state** dropdown list, and choose **Stop instance**.
 
-[![20.png](https://i.postimg.cc/WDstNnRd/20.png)](https://postimg.cc/WDstNnRd)
+[![20.png](https://i.postimg.cc/nLDm1R0G/20.png)](https://postimg.cc/WDstNnRd)
 
 47. In the confirmation dialog, choose **Stop**.
 
-[![21.png](https://i.postimg.cc/ph6dBMmj/21.png)](https://postimg.cc/ph6dBMmj)
+[![21.png](https://i.postimg.cc/j2sJtsKM/21.png)](https://postimg.cc/ph6dBMmj)
 
    Next, connect to the AppServer directly using Session Manager.
 
@@ -255,9 +255,9 @@ Systems Manager is a secure end-to-end management solution for hybrid cloud envi
 
     You are now connected directly to the AppServer.
 
-[![22.png](https://i.postimg.cc/zHHGt2hc/22.png)](https://postimg.cc/zHHGt2hc)
+[![22.png](https://i.postimg.cc/GtqTpZmd/22.png)](https://postimg.cc/zHHGt2hc)
 
-[![23.png](https://i.postimg.cc/gXJJR22d/23.png)](https://postimg.cc/gXJJR22d)
+[![23.png](https://i.postimg.cc/qRcCPtft/23.png)](https://postimg.cc/gXJJR22d)
 
 50. Enter the following Linux commands to change the directory and to view the current working directory of the AppServer.
 
@@ -268,7 +268,7 @@ Systems Manager is a secure end-to-end management solution for hybrid cloud envi
 
     The output should look like the following: `/home/ssm-user`
 
-[![24.png](https://i.postimg.cc/TyQ1pDGC/24.png)](https://postimg.cc/TyQ1pDGC)
+[![24.png](https://i.postimg.cc/1t1q7Gdh/24.png)](https://postimg.cc/TyQ1pDGC)
 
 ### Final scan of the environment
 
@@ -278,13 +278,13 @@ Systems Manager is a secure end-to-end management solution for hybrid cloud envi
 
 52. Select the check box for the previously run assessment, and then choose **Run**.
 
-[![25.png](https://i.postimg.cc/nMXrhrWG/25.png)](https://postimg.cc/nMXrhrWG)
+[![25.png](https://i.postimg.cc/nVkDTQYg/25.png)](https://postimg.cc/nMXrhrWG)
 
 53. Wait for the Status to show **Analysis complete**, and choose the **arrow** to expand the details of the most recent assessment run.
 
 54. Verify that there are zero Findings.
 
-[![26.png](https://i.postimg.cc/hhNjzgWW/26.png)](https://postimg.cc/hhNjzgWW)
+[![26.png](https://i.postimg.cc/rFwtHFfm/26.png)](https://postimg.cc/hhNjzgWW)
 
 
 ## Summary of Task 5
