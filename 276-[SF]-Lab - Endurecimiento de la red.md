@@ -125,6 +125,7 @@ In this task, you will learn how to run an agentless network audit on your EC2 i
 
 26. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
 
+<br>
 
 [![9.png](https://i.postimg.cc/xJTkRPgw/9.png)](https://postimg.cc/xJTkRPgw)
 
@@ -144,7 +145,9 @@ The findings that these rules generate show whether your ports are reachable fro
 
    Telnet is a text-based terminal emulation utility that is part of the TCP/IP suite of protocols. It allows a system to connect to a remote host to perform commands as if you were on the console of the remote machine.
 
-   [![10.png](https://i.postimg.cc/T5KK8YzQ/10.png)](https://postimg.cc/T5KK8YzQ)
+<br>
+
+[![10.png](https://i.postimg.cc/T5KK8YzQ/10.png)](https://postimg.cc/T5KK8YzQ)
 
 27. Choose the **arrow** to expand the medium-severity findings and analyze the details.
 
@@ -152,7 +155,9 @@ The findings that these rules generate show whether your ports are reachable fro
 
    SSH, like the Telnet utility, gives a user the ability to log in to a remote machine and perform commands as if they were on the console of that system. Telnet, however, is insecure because its data isn't encrypted when communicated. SSH provides a secure, encrypted tunnel to access another system remotely.
 
-   [![11.png](https://i.postimg.cc/Kkq1sgHR/11.png)](https://postimg.cc/Kkq1sgHR)
+<br>
+
+[![11.png](https://i.postimg.cc/Kkq1sgHR/11.png)](https://postimg.cc/Kkq1sgHR)
 
 ## Task 4: Update security groups
 
