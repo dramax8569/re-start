@@ -123,7 +123,7 @@ In this task, you will learn how to run an agentless network audit on your EC2 i
 
 [![8.png](https://i.postimg.cc/kXsvVppV/8.png)](https://postimg.cc/KRKMwJFF)
 
-26. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
+25. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
 
 <br>
 
@@ -147,7 +147,7 @@ The findings that these rules generate show whether your ports are reachable fro
 
 <br>
 
-[![10.png](https://i.postimg.cc/T5KK8YzQ/10.png)](https://postimg.cc/T5KK8YzQ)
+[![10.png](https://i.postimg.cc/cCmwnvXq/10.png)](https://postimg.cc/T5KK8YzQ)
 
 27. Choose the **arrow** to expand the medium-severity findings and analyze the details.
 
@@ -157,7 +157,7 @@ The findings that these rules generate show whether your ports are reachable fro
 
 <br>
 
-[![11.png](https://i.postimg.cc/Kkq1sgHR/11.png)](https://postimg.cc/Kkq1sgHR)
+[![11.png](https://i.postimg.cc/yxB0xmhX/11.png)](https://postimg.cc/Kkq1sgHR)
 
 ## Task 4: Update security groups
 
