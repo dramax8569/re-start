@@ -127,7 +127,7 @@ In this task, you will learn how to run an agentless network audit on your EC2 i
 
 <br>
 
-[![9.png](https://i.postimg.cc/xJTkRPgw/9.png)](https://postimg.cc/xJTkRPgw)
+[![9.png](https://i.postimg.cc/KztnmqT8/9.png)](https://postimg.cc/xJTkRPgw)
 
 ### Summary of Task 2
 
