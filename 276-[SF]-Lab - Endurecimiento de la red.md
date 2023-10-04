@@ -32,84 +32,38 @@ Bastion servers are servers used to manage access to an internal or private netw
 
 All backend components, such as Amazon EC2, AWS Identity and Access Management (IAM) roles, and some Amazon Web Services (AWS) services, have been built into your lab already.
 
-## Accessing the AWS Management Console
-
-- At the upper-right corner of these instructions, choose **Start Lab**.
-
-(Troubleshooting tip: If you get an Access Denied error, close the error box, and choose **Start Lab** again.)
-
-The following information indicates the lab status:
-
-- A red circle next to AWS at the upper-left corner of this page indicates that the lab has not been started.
-- A yellow circle next to AWS at the upper-left corner of this page indicates that the lab is starting.
-- A green circle next to AWS at the upper-left corner of this page indicates that the lab is ready.
-
-Wait for the lab to be ready before proceeding.
-
-- At the top of these instructions, choose the green circle next to AWS.
-
-This option opens the AWS Management Console in a new browser tab. The system automatically signs you in.
-
-(Tip: If a new browser tab does not open, a banner or icon at the top of your browser might indicate that your browser is preventing the site from opening pop-up windows. Choose the banner or icon, and choose **Allow pop-ups**.)
-
-If you see a dialog prompting you to switch to the new Console Home, click **Switch to the new Console Home**.
-
-Arrange the AWS Management Console tab so that it displays alongside these instructions. Ideally, you should be able to see both browser tabs at the same time so that you can follow the lab steps.
-
-**Do not change the lab Region unless specifically instructed to do so.**
-
-## Accessing the AWS Management Console
-
-1. At the upper-right corner of these instructions, choose **Start Lab**.
-
-   Troubleshooting tip: If you get an Access Denied error, close the error box, and choose **Start Lab** again.
-
-   The following information indicates the lab status:
-
-   - A red circle next to AWS at the upper-left corner of this page indicates that the lab has not been started.
-   - A yellow circle next to AWS at the upper-left corner of this page indicates that the lab is starting.
-   - A green circle next to AWS at the upper-left corner of this page indicates that the lab is ready.
-   
-   Wait for the lab to be ready before proceeding.
-
-2. At the top of these instructions, choose the green circle next to AWS.
-
-   This option opens the AWS Management Console in a new browser tab. The system automatically signs you in.
-
-   Tip: If a new browser tab does not open, a banner or icon at the top of your browser might indicate that your browser is preventing the site from opening pop-up windows. Choose the banner or icon, and choose **Allow pop-ups**.
-
-   If you see a dialog prompting you to switch to the new Console Home, click **Switch to the new Console Home**.
-
-3. Arrange the AWS Management Console tab so that it displays alongside these instructions. Ideally, you should be able to see both browser tabs at the same time so that you can follow the lab steps.
-
-   **Do not change the lab Region unless specifically instructed to do so.**
-
 ## Task 1: View EC2 instances and add tags
 
 To create an assessment target for Amazon Inspector Classic to assess, you start by tagging the EC2 instances that you want to include in your target. In this task, you tag the BastionServer instance.
 
 Every AWS tag consists of a key and value pair of your choice. For example, you might choose to name your key Name and your value MyFirstInstance.
 
-1. In the AWS Management Console, choose **Services** and select **EC2**.
+6. In the AWS Management Console, choose **Services** and select **EC2**.
 
-2. If you see **New EC2 Experience** at the upper-left of your screen, confirm that **New EC2 Experience** is selected. This lab is designed to use the new Amazon EC2 console.
+7. If you see **New EC2 Experience** at the upper-left of your screen, confirm that **New EC2 Experience** is selected. This lab is designed to use the new Amazon EC2 console.
 
-3. In the left navigation pane, choose **Instances**.
+8. In the left navigation pane, choose **Instances**.
 
    The running BastionServer and AppServer EC2 instances are listed.
 
-4. Choose the BastionServer instance.
+[![1.png](https://i.postimg.cc/T1HBf3gx/1.png)](https://postimg.cc/2Lh0xm09)
 
-5. Choose the **Tags** tab.
+9. Choose the BastionServer instance.
 
-6. Choose **Manage tags**.
+10. Choose the **Tags** tab.
 
-7. Choose **Add tag**, and then enter the following information:
+11. Choose **Manage tags**.
+
+[![2.png](https://i.postimg.cc/Kc96nJVW/2.png)](https://postimg.cc/xqzpQy9G)
+
+12. Choose **Add tag**, and then enter the following information:
 
    - Key: SecurityScan
    - Value: true
 
-8. Choose **Save**.
+13. Choose **Save**.
+
+[![3.png](https://i.postimg.cc/1z9B7ZVr/3.png)](https://postimg.cc/NKzRLS4K)
 
 ## Task 2: Configure and run Amazon Inspector
 
@@ -117,47 +71,60 @@ In this task, you will learn how to run an agentless network audit on your EC2 i
 
 **Use case:** It might not be possible to install agents on all hosts in your deployment. Not all types of operating systems support Amazon Inspector agents. Using this method, you will be able to run a network audit on all hosts.
 
-1. In the AWS Management Console, choose the **Services** menu. Then choose **Security, Identity, & Compliance** and select **Inspector**.
+14. In the AWS Management Console, choose the **Services** menu. Then choose **Security, Identity, & Compliance** and select **Inspector**.
 
-2. To open the navigation pane, click on the left.
+15. To open the navigation pane, click on the left.
 
-3. Choose **Switch to Inspector Classic**.
+16. Choose **Switch to Inspector Classic**.
 
-4. Choose **Get started**.
+17. Choose **Get started**.
 
-5. Choose **Advanced setup**.
+[![4.png](https://i.postimg.cc/brbFc9yx/4.png)](https://postimg.cc/YLrxQgm0)
 
-6. In the **Define an assessment target** section, configure the following options:
+18. Choose **Advanced setup**.
+
+19. In the **Define an assessment target** section, configure the following options:
 
    - For Name, enter **Network-Audit**.
    - Clear the checkbox for **All Instances**.
    - For Tags: Key, choose **SecurityScan**.
    - For Tags: Value, choose **true**.
    - Clear the checkbox for **Install Agents**.
-   - Choose **Next**.
+20. Choose **Next**.
 
-7. In the **Define an assessment template** section, configure the following options:
+[![5.png](https://i.postimg.cc/VsbhCmqJ/5.png)](https://postimg.cc/8sNw88nG)
+
+21. In the **Define an assessment template** section, configure the following options:
 
    - For Name, enter **Assessment-Template-Network**.
    - For Rules packages, leave **Network Reachability-1.1** selected, but choose the **x** next to each of the other packages to remove them.
    - For Duration, choose **15 Minutes**.
    - Clear the checkbox for **Assessment Schedule**.
-   - Choose **Next**.
+22. Choose **Next**.
 
-8. Choose **Create**.
+[![6.png](https://i.postimg.cc/CxJrg1gQ/6.png)](https://postimg.cc/QF9JgjVQ)
+
+23. Choose **Create**.
 
    You should see a SUCCESS notification, which confirms that the assessment run was initiated. It takes about 3-5 minutes to complete.
 
-9. While you wait, you can learn more about Amazon Inspector.
+[![7.png](https://i.postimg.cc/C5jJ6M7J/7.png)](https://postimg.cc/tn4hsjLV)
 
-10. Check the status of the scan:
+   While you wait, you can learn more about Amazon Inspector.
+
+24. Check the status of the scan:
 
     - In the left navigation pane, choose **Assessment runs**.
     - In the **Amazon Inspector - Assessment Runs** section, choose the **arrow** in the row for the run that you initiated to expand it and access more options for your run.
     - To see the status of the run, choose **Show status**. If you do not see **Show status**, choose **arrow** at the top.
     - To close and return to the previous screen, choose **Close**.
+   
+[![8.png](https://i.postimg.cc/KRKMwJFF/8.png)](https://postimg.cc/KRKMwJFF)
 
-11. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
+25. Once the status changes to **Analysis complete**, choose **Findings** in the left navigation pane.
+
+
+[![9.png](https://i.postimg.cc/xJTkRPgw/9.png)](https://postimg.cc/xJTkRPgw)
 
 ### Summary of Task 2
 
@@ -167,7 +134,7 @@ In this task, you created an assessment target (a collection of the AWS resource
 
 The findings that these rules generate show whether your ports are reachable from the internet through an internet gateway (including instances behind Application Load Balancers or Classic Load Balancers), a VPC peering connection, or a virtual private network (VPN) through a virtual gateway. These findings also highlight network configurations that allow for potentially malicious access, such as mismanaged security groups, ACLs, and internet gateways.
 
-1. Choose the **arrow** to expand the high-severity finding. You should see the following key details:
+26. Choose the **arrow** to expand the high-severity finding. You should see the following key details:
 
    - AWS agent ID shows you the affected EC2 instance.
    - Description shows the reason for the finding. In this case, TCP port 23, which is associated with Telnet, is reachable from the internet.
@@ -175,56 +142,69 @@ The findings that these rules generate show whether your ports are reachable fro
 
    Telnet is a text-based terminal emulation utility that is part of the TCP/IP suite of protocols. It allows a system to connect to a remote host to perform commands as if you were on the console of the remote machine.
 
-2. Choose the **arrow** to expand the medium-severity findings and analyze the details.
+   [![10.png](https://i.postimg.cc/T5KK8YzQ/10.png)](https://postimg.cc/T5KK8YzQ)
+
+27. Choose the **arrow** to expand the medium-severity findings and analyze the details.
 
    For the medium-severity finding, TCP port 22, which is associated with SSH, is reachable from the internet.
 
    SSH, like the Telnet utility, gives a user the ability to log in to a remote machine and perform commands as if they were on the console of that system. Telnet, however, is insecure because its data isn't encrypted when communicated. SSH provides a secure, encrypted tunnel to access another system remotely.
 
+   [![11.png](https://i.postimg.cc/Kkq1sgHR/11.png)](https://postimg.cc/Kkq1sgHR)
+
 ## Task 4: Update security groups
 
 In this task, you will see a few remediation options for the security findings that Amazon Inspector discovered. The first option shows how to lock down port 22 to specific IP addresses.
 
-1. Choose the **arrow** to expand the details of the high-severity finding.
+28. Choose the **arrow** to expand the details of the high-severity finding.
 
-2. In the Recommendation section, choose the link to the security group. The link should look similar to the following example: sg-0b2dc685cd6e6e706.
+29. In the Recommendation section, choose the link to the security group. The link should look similar to the following example: sg-0b2dc685cd6e6e706.
 
-3. When the link opens, you can see the BastionServerSG security group that is attached to the BastionServer that has produced findings within Amazon Inspector.
+When the link opens, you can see the BastionServerSG security group that is attached to the BastionServer that has produced findings within Amazon Inspector.
 
-4. Choose the **Inbound rules** tab.
+[![12.png](https://i.postimg.cc/kDHVQKSH/12.png)](https://postimg.cc/kDHVQKSH)
 
-5. These are the current inbound rules for this security group. They are also the high and medium findings that Amazon Inspector caught.
+30. Choose the **Inbound rules**.
+These are the current inbound rules for this security group. They are also the high and medium findings that Amazon Inspector caught.
 
-6. Choose **Edit inbound rules**.
-
-7. For the inbound rule associated with port range 23, choose **Delete**.
-
-   Port 23 Telnet is vulnerable to security attacks, and the SSH protocol helps you to overcome many security issues of Telnet. SSH is now the only major protocol to access the network devices and servers over the internet.
-
-8. For the SSH rule, remove the current inbound IP address of 0.0.0.0/0 by choosing the **X** next to it to update the resource.
-
+31. Choose **Edit inbound rules**.
+   
+32. For the inbound rule associated with port range 23, choose **Delete**.
+Port 23 Telnet is vulnerable to security attacks, and the SSH protocol helps you to overcome many security issues of Telnet. SSH is now the only major protocol to access the network devices and servers over the internet.
+   
+33. For the SSH rule, remove the current inbound IP address of 0.0.0.0/0 by choosing the **X** next to it to update the resource.
    The 0.0.0.0/0 IP address for inbound rules means that port 22 is accessible from anyone on the internet.
 
-9. You can adjust the inbound rules so that only your IP address is able to access port 22. Although this option is much more secure, it still has vulnerabilities. For example, someone could access the computer that is associated with that IP address and gain access.
+You can adjust the inbound rules so that only your IP address is able to access port 22. Although this option is much more secure, it still has vulnerabilities. For example, someone could      access the computer that is associated with that IP address and gain access.
 
-10. For Source, choose the **Custom** dropdown list, and then select **My IP**.
+35. For Source, choose the **Custom** dropdown list, and then select **My IP**.
 
-11. Choose **Save rules**.
+36. Choose **Save rules**.
 
-12. Re-scan the environment
+[![13.png](https://i.postimg.cc/v4f6HTcN/13.png)](https://postimg.cc/v4f6HTcN)
 
-    Navigate to the browser tab that has Amazon Inspector open. In the left navigation pane, choose **Assessment templates**.
+### Re-scan the environment
 
-    Select the check box next to **Assessment-Template-Network**, and choose **Run**.
+36. Navigate to the browser tab that has Amazon Inspector open. In the left navigation pane, choose **Assessment templates**.
+
+[![14.png](https://i.postimg.cc/HJtcXN00/14.png)](https://postimg.cc/HJtcXN00)
+
+37. Select the check box next to **Assessment-Template-Network**, and choose **Run**.
 
     This step runs the same scan from earlier in the lab and produces findings from the security group updates.
     Note: The scan takes approximately 30-60 seconds to complete.
 
-13. In the left navigation pane, choose **Assessment runs**, and refresh every 10-15 seconds until the Status changes to **Analysis complete**.
+[![15.png](https://i.postimg.cc/GBRTBRDh/15.png)](https://postimg.cc/GBRTBRDh)
 
-14. In the left navigation pane, choose **Findings**, and then choose **Date** to sort by most-recent findings.
+38. In the left navigation pane, choose **Assessment runs**, and refresh every 10-15 seconds until the Status changes to **Analysis complete**.
+
+[![16.png](https://i.postimg.cc/0rjMKczm/16.png)](https://postimg.cc/0rjMKczm)
+
+39. In the left navigation pane, choose **Findings**, and then choose **Date** to sort by most-recent findings.
 
    The high-severity finding is now gone, but the medium-severity finding remains. Although port 22 was scoped down to allow access to only your IP address, port 22 is still technically open to the internet outside the VPC.
+
+[![17.png](https://i.postimg.cc/KRg1Jjr8/17.png)](https://postimg.cc/KRg1Jjr8)
 
 ### Summary of Task 4
 
@@ -236,31 +216,43 @@ In this task, you replace the BastionServer instance, which has primarily used S
 
 Systems Manager is a secure end-to-end management solution for hybrid cloud environments. Systems Manager is the operations hub for your AWS applications and resources and consists of four core feature groups.
 
-1. In the AWS Management Console, choose **Services** and select **EC2**.
+40. In the AWS Management Console, choose **Services** and select **EC2**.
 
-2. In the left navigation pane, choose **Security Groups**.
+41. In the left navigation pane, choose **Security Groups**.
 
-3. Choose the Security group ID for BastionServerSG.
+42. Choose the Security group ID for BastionServerSG.
 
-4. Choose **Edit inbound rules**.
+43. Choose **Edit inbound rules**.
 
-5. Choose **Delete**, and then choose **Save rules** to remove the SSH inbound rule.
+[![18.png](https://i.postimg.cc/tsQYfb2t/18.png)](https://postimg.cc/tsQYfb2t)
 
-6. In the left navigation pane, choose **Instances**.
+44. Choose **Delete**, and then choose **Save rules** to remove the SSH inbound rule.
 
-7. Select the check box for BastionServer. Then choose the **Instance state** dropdown list, and choose **Stop instance**.
+[![19.png](https://i.postimg.cc/fVcJQPP4/19.png)](https://postimg.cc/fVcJQPP4)
 
-8. In the confirmation dialog, choose **Stop**.
+45. In the left navigation pane, choose **Instances**.
 
-9. Next, connect to the AppServer directly using Session Manager.
+46. Select the check box for BastionServer. Then choose the **Instance state** dropdown list, and choose **Stop instance**.
+
+[![20.png](https://i.postimg.cc/WDstNnRd/20.png)](https://postimg.cc/WDstNnRd)
+
+47. In the confirmation dialog, choose **Stop**.
+
+[![21.png](https://i.postimg.cc/ph6dBMmj/21.png)](https://postimg.cc/ph6dBMmj)
+
+   Next, connect to the AppServer directly using Session Manager.
 
    With Session Manager, you can quickly and securely access your EC2 instances through an interactive one-click browser-based shell or through the AWS Command Line Interface (AWS CLI) without the need to open inbound ports, maintain bastion hosts, or manage SSH keys.
 
-10. Select the check box next to AppServer, and then choose **Connect**.
+48. Select the check box next to AppServer, and then choose **Connect**.
 
     You are now connected directly to the AppServer.
 
-11. Enter the following Linux commands to change the directory and to view the current working directory of the AppServer.
+[![22.png](https://i.postimg.cc/zHHGt2hc/22.png)](https://postimg.cc/zHHGt2hc)
+
+[![23.png](https://i.postimg.cc/gXJJR22d/23.png)](https://postimg.cc/gXJJR22d)
+
+50. Enter the following Linux commands to change the directory and to view the current working directory of the AppServer.
 
     ```
     cd ~
@@ -269,17 +261,24 @@ Systems Manager is a secure end-to-end management solution for hybrid cloud envi
 
     The output should look like the following: `/home/ssm-user`
 
+[![24.png](https://i.postimg.cc/TyQ1pDGC/24.png)](https://postimg.cc/TyQ1pDGC)
+
 ### Final scan of the environment
 
-1. Go to your browser tab that has Amazon Inspector open.
+50. Go to your browser tab that has Amazon Inspector open.
 
-2. In the left navigation pane, choose **Assessment runs**.
+51. In the left navigation pane, choose **Assessment runs**.
 
-3. Select the check box for the previously run assessment, and then choose **Run**.
+52. Select the check box for the previously run assessment, and then choose **Run**.
 
-4. Wait for the Status to show **Analysis complete**, and choose the **arrow** to expand the details of the most recent assessment run.
+[![25.png](https://i.postimg.cc/nMXrhrWG/25.png)](https://postimg.cc/nMXrhrWG)
 
-5. Verify that there are zero Findings.
+53. Wait for the Status to show **Analysis complete**, and choose the **arrow** to expand the details of the most recent assessment run.
+
+54. Verify that there are zero Findings.
+
+[![26.png](https://i.postimg.cc/hhNjzgWW/26.png)](https://postimg.cc/hhNjzgWW)
+
 
 ## Summary of Task 5
 
