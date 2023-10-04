@@ -169,7 +169,7 @@ In this task, you will see a few remediation options for the security findings t
 
 When the link opens, you can see the BastionServerSG security group that is attached to the BastionServer that has produced findings within Amazon Inspector.
 
-[![12.png](https://i.postimg.cc/kDHVQKSH/12.png)](https://postimg.cc/kDHVQKSH)
+[![12.png](https://i.postimg.cc/4NfzT1xX/12.png)](https://postimg.cc/kDHVQKSH)
 
 30. Choose the **Inbound rules**.
 These are the current inbound rules for this security group. They are also the high and medium findings that Amazon Inspector caught.
@@ -188,13 +188,13 @@ You can adjust the inbound rules so that only your IP address is able to access 
 
 36. Choose **Save rules**.
 
-[![13.png](https://i.postimg.cc/v4f6HTcN/13.png)](https://postimg.cc/v4f6HTcN)
+[![13.png](https://i.postimg.cc/HkP0z7Hd/13.png)](https://postimg.cc/v4f6HTcN)
 
 ### Re-scan the environment
 
 36. Navigate to the browser tab that has Amazon Inspector open. In the left navigation pane, choose **Assessment templates**.
 
-[![14.png](https://i.postimg.cc/HJtcXN00/14.png)](https://postimg.cc/HJtcXN00)
+[![14.png](https://i.postimg.cc/0NTYRRb4/14.png)](https://postimg.cc/HJtcXN00)
 
 37. Select the check box next to **Assessment-Template-Network**, and choose **Run**.
 
