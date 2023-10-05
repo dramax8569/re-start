@@ -52,25 +52,30 @@ In this task, you will create an AWS KMS key that you will later use to encrypt 
    - Description: Key used to encrypt and decrypt data files.
    Then, choose "Next."
 
-------------------------------3
+[![3.png](https://i.postimg.cc/JhrpkbMx/3.png)](https://postimg.cc/sMLPFGBG)
 
 10. On the "Define key administrative permissions" page, in the "Key administrators" section, search for and select the check box for "voclabs," and then choose "Next."
 
-------------------------------4
+[![4.png](https://i.postimg.cc/rwChshXz/4.png)](https://postimg.cc/RWh1bL0z)
 
 11. On the "Define key usage permissions" page, in the "This account" section, search for and select the check box for "voclabs," and then choose "Next."
 
-------------------------------5
+[![5.png](https://i.postimg.cc/13ZCykdL/5.png)](https://postimg.cc/xctyR4nR)
+
 12. Review the settings, and then choose "Finish."
 
-------------------------------6
+[![6.png](https://i.postimg.cc/wTN48qwX/6.png)](https://postimg.cc/gnYH3WFj)
 
-------------------------------7
+[![7.png](https://i.postimg.cc/G3Vg58x3/7.png)](https://postimg.cc/kDNyV5HL)
 
 13. Choose the link for "MyKMSKey," which you just created, and copy the ARN (Amazon Resource Name) value to a text editor.
-14. 
-------------------------------8
-arn:aws:kms:us-west-2:726556837515:key/1cdb5367-f3d0-4e94-b3b0-5f5b94285242
+
+[![8.png](https://i.postimg.cc/Y2hyRfgy/8.png)](https://postimg.cc/NLv4fXd1)
+    
+    ```
+    arn:aws:kms:us-west-2:726556837515:key/1cdb5367-f3d0-4e94-b3b0-5f5b94285242
+    ```
+    
    You will use this copied ARN later in the lab.
 
 **Summary of Task 1:**
@@ -87,11 +92,11 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 
 16. In the Instances list, select the checkbox next to the File Server instance, and then choose "Connect."
 
-------------------------------9
+[![9.png](https://i.postimg.cc/BtfXrnt7/9.png)](https://postimg.cc/bSLyb8x1)
     
 18. Choose the Session Manager tab, and then choose "Connect."
 
-------------------------------10
+[![10.png](https://i.postimg.cc/7h25t2PT/10.png)](https://postimg.cc/N2QG5LHg)
     
 19. To change to the home directory and create the AWS credentials file, run the following commands:
     
@@ -109,7 +114,7 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 
       The AWS configuration file is created, and you will update it in a later step. The previous entries are temporary placeholders.
 
-------------------------------11
+[![11.png](https://i.postimg.cc/9fLwD2Nz/11.png)](https://postimg.cc/v16ZKJyd)
 
 21. Navigate to the Vocareum console page, and choose the "AWS Details" button.
 
@@ -124,7 +129,8 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
       ```
       vi ~/.aws/credentials
       ```
-------------------------------12
+[![12.png](https://i.postimg.cc/xC7kPRQ2/12.png)](https://postimg.cc/N96fsRLJ)
+
 26. In the `~/.aws/credentials` file, type `dd` multiple times to delete the contents of the file.
 
 27. Paste in the code block that you copied from Vocareum.
@@ -145,7 +151,7 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 
     Now you will install the AWS Encryption CLI and export your path. By doing this, you will be able to run the commands to encrypt and decrypt data.
 
-------------------------------13
+[![13.png](https://i.postimg.cc/hjhzxYHs/13.png)](https://postimg.cc/qhVvH1B6)
 
 30. To install the AWS Encryption CLI and set your path, run the following commands:
 
@@ -153,8 +159,9 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
     pip3 install aws-encryption-sdk-cli
     export PATH=$PATH:/home/ssm-user/.local/bin
     ```
-------------------------------14
-------------------------------15
+[![14.png](https://i.postimg.cc/FKrJFzp2/14.png)](https://postimg.cc/pmSdq2gZ)
+
+[![15.png](https://i.postimg.cc/pLYFtzff/15.png)](https://postimg.cc/VJv6qSHv)
 **Summary:**
 In this task, you configured the File Server EC2 instance to use AWS credentials and installed the AWS Encryption CLI to enable encryption and decryption of data.
 
@@ -174,7 +181,8 @@ In this task, you will create a text file with mock sensitive data in it. You wi
     ```
     cat secret1.txt
     ```
-------------------------------16
+[![16.png](https://i.postimg.cc/x8wz9PpR/16.png)](https://postimg.cc/64h30CX2)
+
 32. To create a directory to output the encrypted file, run the following command:
 
     ```
@@ -191,7 +199,7 @@ In this task, you will create a text file with mock sensitive data in it. You wi
 
 35. Run the updated command in the File Server terminal. This command saves the ARN of an AWS KMS key in the `$keyArn` variable. When you encrypt using an AWS KMS key, you can identify it by using a key ID, key ARN, alias name, or alias ARN.
 
-------------------------------17
+[![17.png](https://i.postimg.cc/WpCrm2pk/17.png)](https://postimg.cc/Rq1N4xHS)
 
 36. To encrypt the `secret1.txt` file, run the following command:
 
@@ -215,7 +223,7 @@ In this task, you will create a text file with mock sensitive data in it. You wi
 
   When the encrypt command succeeds, it does not return any output.
 
-  ------------------------------18
+[![18.png](https://i.postimg.cc/FsSSD21n/18.png)](https://postimg.cc/svV12HYp)
 
 37. To determine whether the command succeeded, run the following command:
 
@@ -243,11 +251,11 @@ In this task, you will create a text file with mock sensitive data in it. You wi
     cd output
     cat secret1.txt.encrypted
     ```
-------------------------------19 
+[![19.png](https://i.postimg.cc/6pNvSYv6/19.png)](https://postimg.cc/rKQsRGj7)
 
-    The encryption and decryption process takes data in plaintext, which is readable and understandable, and manipulates its form to create ciphertext, which is what you are now seeing. When data has been transformed into ciphertext, the plaintext becomes inaccessible until it's decrypted.
+The encryption and decryption process takes data in plaintext, which is readable and understandable, and manipulates its form to create ciphertext, which is what you are now seeing. When data has been transformed into ciphertext, the plaintext becomes inaccessible until it's decrypted.
 
-------------------------------20
+[![20.png](https://i.postimg.cc/mDrMjkFQ/20.png)](https://postimg.cc/gwfnkYsJ)
 
 This diagram shows how encryption works with symmetric keys and algorithms. A symmetric key and algorithm are used to convert a plaintext message into ciphertext.
 
@@ -282,13 +290,15 @@ This diagram shows how encryption works with symmetric keys and algorithms. A sy
     ```
     cat secret1.txt.encrypted.decrypted
     ```
+    
+[![21.png](https://i.postimg.cc/d1SCxF8g/21.png)](https://postimg.cc/2bh31P9x)
+
+[![22.png](https://i.postimg.cc/8cJv8Y4c/22.png)](https://postimg.cc/XBWqdQT6)
 
     After successful decryption, you can now see the original plaintext contents of the `secret1.txt`.
 
-------------------------------21
-------------------------------22
 
-------------------------------22
+[![23.png](https://i.postimg.cc/W48g0gtN/23.png)](https://postimg.cc/VSSJ8Sjp)
 
 This diagram shows how the same secret key and symmetric algorithm from the encryption process are used to decrypt the ciphertext back into plaintext.
 
