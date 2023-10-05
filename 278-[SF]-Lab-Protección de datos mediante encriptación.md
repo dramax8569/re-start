@@ -133,17 +133,17 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 
 26. In the `~/.aws/credentials` file, type `dd` multiple times to delete the contents of the file.
 
-27. Paste in the code block that you copied from Vocareum.
+26. Paste in the code block that you copied from Vocareum.
 
       The AWS credentials file should now look similar to the following:
 
-      ```
-      Example of AWS credentials file contents.
-      ```
+[![24.png](https://i.postimg.cc/0NzJFQfx/24.png)](https://postimg.cc/QBrtWjwn)
 
-28. To save and close the file, press Escape, type `:wq`, and then press Enter.
+The AWS credentials file includes the following: aws_access_key_id, aws_secret_access_key, and aws_session_token. The credentials used are from the AWS Details section.
 
-29. To view the updated contents of the file, run the following command:
+27. To save and close the file, press Escape, type `:wq`, and then press Enter.
+
+28. To view the updated contents of the file, run the following command:
 
     ```
     cat ~/.aws/credentials
@@ -153,7 +153,7 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 
 [![13.png](https://i.postimg.cc/hjhzxYHs/13.png)](https://postimg.cc/qhVvH1B6)
 
-30. To install the AWS Encryption CLI and set your path, run the following commands:
+29. To install the AWS Encryption CLI and set your path, run the following commands:
 
     ```
     pip3 install aws-encryption-sdk-cli
@@ -162,6 +162,7 @@ Before you can encrypt and decrypt data, you need to set up a few things. To use
 [![14.png](https://i.postimg.cc/FKrJFzp2/14.png)](https://postimg.cc/pmSdq2gZ)
 
 [![15.png](https://i.postimg.cc/pLYFtzff/15.png)](https://postimg.cc/VJv6qSHv)
+
 **Summary:**
 In this task, you configured the File Server EC2 instance to use AWS credentials and installed the AWS Encryption CLI to enable encryption and decryption of data.
 
