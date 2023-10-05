@@ -38,14 +38,12 @@ In this task, you will create an AWS KMS key that you will later use to encrypt 
 
 7. Choose "Create a key."
 
-
-------------------------------1
-
+[![1.png](https://i.postimg.cc/Hxj3SdJ7/1.png)](https://postimg.cc/Fd5jztV9)
 
 8. For Key type, choose "Symmetric," and then choose "Next." Symmetric encryption uses the same key to encrypt and decrypt data, which makes it fast and efficient to use. Asymmetric encryption uses a public key to encrypt data and a private key to decrypt information.
 
 
-------------------------------2
+[![2.png](https://i.postimg.cc/g0gNqn0W/2.png)](https://postimg.cc/XZyfnNFH)
 
 
 
