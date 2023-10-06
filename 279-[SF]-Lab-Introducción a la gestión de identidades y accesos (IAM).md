@@ -41,7 +41,9 @@ This lab requires approximately 60 minutes to complete.
 In this task, you will create a custom password policy for your AWS account, which will affect all users associated with the account.
 
 1. Start by noting the Region you are currently in (e.g., Oregon). You can find the Region displayed in the upper-right corner of the console page.
-----------------------2
+
+[![2.png](https://i.postimg.cc/523fKSc3/2.png)](https://postimg.cc/WddRhr1F)
+
 2. Go to the AWS Management Console and enter "IAM" in the search box, then select "IAM" from the results.
 
 3. In the left navigation pane, choose "Account settings."
@@ -49,17 +51,23 @@ In this task, you will create a custom password policy for your AWS account, whi
 4. Here, you can view the default password policy currently in effect. However, your company has stricter requirements, so you need to update this policy.
 
 5. Choose "Change password policy."
-----------------------3
+
+[![3.png](https://i.postimg.cc/Y0YH61fQ/3.png)](https://postimg.cc/vxYkMxKm)
+
 6. Under "Select your account password policy requirements," configure the following options:
    - For "Enforce minimum password length," change it from 8 to 10 characters.
    - Select every checkbox except for "Password expiration requires administrator reset."
    - For "Enable password expiration," keep the default option of 90 days.
    - For "Prevent password reuse," keep the default option of 5 passwords.
-----------------------4
+
+[![4.png](https://i.postimg.cc/3x7KZbqN/4.png)](https://postimg.cc/jLg0xvtY)
+
 7. Choose "Save changes."
 
 These changes will affect the AWS account level and apply to every user associated with the account.
-----------------------5
+
+[![5.png](https://i.postimg.cc/BZK4f09t/5.png)](https://postimg.cc/PNTB10qk)
+
 **Summary of Task 1:**
 In this task, you enhanced the password requirements by creating a custom password policy. The selected password options will make it more challenging for users to create easily crackable passwords.
 
@@ -78,7 +86,7 @@ In this task, you will explore the pre-created users and user groups in IAM.
 14. Go to the "Groups" tab. You'll notice that user-1 is not a member of any user groups. User groups consist of multiple users who need access to the same resources. By assigning privileges to the group, you can efficiently manage permissions for multiple users.
 
 15. Switch to the "Security credentials" tab. Here, you can see that user-1 has been assigned a Console password.
-----------------------6
+[![6.png](https://i.postimg.cc/85qGfyW1/6.png)](https://postimg.cc/34CVPFn6)
 16. In the left navigation pane, select "User groups." You will find the following user groups already created for you:
     - EC2-Admin
     - EC2-Support
