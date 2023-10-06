@@ -150,3 +150,201 @@ Your company is experiencing substantial growth in its use of AWS, utilizing num
 | user-3  | EC2-Admin     | View, start, and stop EC2 instances       |
 
 This setup will allow you to tailor permissions to each user's specific responsibilities within your AWS environment.
+
+## Task 3: Add users to user groups
+
+You have recently hired user-1 into a role where they will provide support for Amazon S3. You add them to the S3-Support group so that they inherit the necessary permissions via the attached AmazonS3ReadOnlyAccess policy.
+
+You can ignore any not authorized errors that appear during this task. They are caused by your lab account having limited permissions and should not impact your ability to complete the lab.
+
+### Add user-1 to the S3-Support group
+
+38. In the left navigation pane, choose User groups.
+39. Choose the S3-Support group.
+40. Choose the Users tab.
+41. In the Users tab, choose Add users.
+ 
+ ----------------------10
+ 
+42. In the Add users to S3-Support window, configure the following options:
+   - Select the check box for user-1.
+   - Choose Add Users.
+ ----------------------11
+43. In the Users tab, you see that user-1 has been added to the group.
+ ----------------------12
+### Add user-2 to the EC2-Support group
+
+You have hired user-2 into a role where they provide support for Amazon EC2.
+
+43. Using the previous steps in this task, add user-2 to the EC2-Support group.
+   - user-2 should now be part of the EC2-Support group.
+ ----------------------13
+### Add user-3 to the EC2-Admin group
+
+You have hired user-3 as your Amazon EC2 administrator to manage your EC2 instances.
+
+44. Using the previous steps in this task, add user-3 to the EC2-Admin group.
+   - user-3 should now be part of the EC2-Admin group.
+
+ ----------------------14
+45. In the left navigation pane, choose User groups.
+   - Each group should have a 1 in the Users column for the number of users in each group.
+   - If there is not a 1 beside each group, revisit the previous instructions in this task to confirm that each user is assigned to a group as shown in the table at the beginning of the Business scenario section.
+ ----------------------15
+### Summary of task 3
+
+In this task, you added all the associated users to the user groups.
+
+## Task 4: Sign in and test user permissions
+
+In this task, you test the permissions of each IAM user.
+
+46. In the left navigation pane, choose Dashboard.
+
+   The AWS Account section includes a Sign-in URL for IAM users in this account. This link should look similar to the following: [Sign-in URL](https://123456789012.signin.aws.amazon.com/console). You can use this link to sign in to the AWS account that you are currently using.
+
+47. Copy the Sign-in URL for IAM users in this account to a text editor.
+
+48. Open a private window using the following instructions for your web browser:
+
+   - **Mozilla Firefox**
+     - Choose the menu bars at the upper-right of the screen.
+     - Choose New Private Window.
+   
+   -  **Google Chrome**
+       - Choose the ellipsis at the upper-right of the screen.
+       - Choose New Incognito window.
+   
+   - **Microsoft Edge**
+       - Choose the ellipsis at the upper-right of the screen.
+       - Choose New InPrivate window.
+   
+   - **Microsoft Internet Explorer**
+       - Choose the Tools menu option.
+       - Choose InPrivate Browsing.
+
+49. Paste the Sign-in URL for IAM users in this account into your private window, and press Enter.
+
+   You now sign in as user-1, who has been hired as your Amazon S3 storage support staff.
+
+50. Sign in using the following credentials:
+
+   - IAM user name: Enter user-1
+   - Password: Enter Lab-Password1
+
+51. Choose Sign in.
+
+   If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
+ ----------------------16
+52. From the Services menu, choose S3.
+
+53. Choose the name of one of your buckets, and browse the contents.
+
+   Because your user is part of the S3-Support group in IAM, they have permission to view a list of S3 buckets and their contents.
+ ----------------------17
+   Now, test whether they have access to Amazon EC2.
+
+54. From the Services menu, choose EC2.
+
+55. In the left navigation pane, choose Instances.
+
+   You cannot see any instances. Instead, you see a message that says, You are not authorized to perform this operation. This message appears because your user has not been assigned any permissions to use Amazon EC2.
+ ----------------------18
+   You now sign in as user-2, who has been hired as your Amazon EC2 support person.
+
+56. Sign user-1 out of the AWS Management Console by following these steps:
+
+   - At the top of the screen, choose user-1.
+   - Choose Sign out.
+ ----------------------19
+
+57. Paste the Sign-in URL for IAM users in this account into your private window, and press Enter. This link should be in your text editor.
+
+58. Sign in using the following credentials:
+   - IAM user name: Enter user-2
+   - Password: Enter Lab-Password2
+
+59. Choose Sign in.
+ ----------------------20
+   If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
+
+60. From the Services menu, choose EC2.
+
+61. In the left navigation pane, choose Instances.
+
+   You are now able to see an EC2 instance because you have read-only permissions. However, you are not able to make any changes to Amazon EC2 resources.
+ ----------------------21
+   If you cannot see an EC2 instance, then your Region may be incorrect. In the upper-right of the screen, choose the Region menu, and select the Region that you noted at the start of the lab (for example, Oregon).
+ ----------------------22
+
+Your EC2 instance should be selected. If it is not, choose it.
+
+62. From the Instance state dropdown list, choose Stop instance.
+
+63. In the Stop instance? window, choose Stop.
+
+
+Your EC2 instance should be selected. If it is not, choose it.
+
+62. From the Instance state dropdown list, choose Stop instance.
+
+63. In the Stop instance? window, choose Stop.
+
+----------------------23
+
+You receive an error that says, Failed to stop the instance. You are not authorized to perform this operation. This message demonstrates that the policy gives you permission to only view information and does not give you permission to make changes.
+
+64. At the Stop Instances window, choose Cancel.
+
+Next, check if user-2 can access Amazon S3.
+
+65. From the Services menu, choose S3.
+
+You receive an You don't have permissions to list buckets message because user-2 does not have permission to use Amazon S3.
+
+----------------------24
+
+You now sign in as user-3, who has been hired as your Amazon EC2 administrator.
+
+66. Sign user-2 out of the AWS Management Console by following these steps:
+    * At the top of the screen, choose user-2.
+    * Choose Sign out.
+----------------------25
+
+67. Paste the Sign-in URL for IAM users in this account into your private window, and press Enter. If this link is not in your clipboard, retrieve it from the text editor where you pasted it earlier.
+
+68. Sign in using the following credentials:
+    * IAM user name: Enter user-3
+    * Password: Enter Lab-Password3
+
+69. Choose Sign in. If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
+
+----------------------26
+
+70. From the Services menu, choose EC2.
+
+71. In the left navigation pane, choose Instances. As an EC2 administrator, you should now have permissions to stop the EC2 instance. Your EC2 instance should be selected. If it is not, choose it. If you cannot see an EC2 instance, then your Region may be incorrect. In the upper-right of the screen, choose the Region menu, and select the Region that you noted at the start of the lab (for example, Oregon).
+
+72. From the Instance state dropdown list, choose Stop instance.
+
+73. In the Stop instance? window, choose Stop. The instance should enter the Stopping state and will shut down.
+
+74. Close your private window.
+
+----------------------27
+
+Summary of task 4
+In this task, you were able to sign in as all three users. You verified that user-1 was able to view S3 buckets but unable to view EC2 instances. You then signed in as user-2 and verified that they were able to view EC2 instances but unable to perform the stop instance action. user-2 was also unable to view S3 buckets. After signing in as user-3, you were able to view EC2 instances and perform the stop instance action.
+
+## Conclusion
+
+Congratulations! You have successfully completed this lab and achieved the following objectives:
+
+- Created and applied an IAM password policy
+- Explored pre-created IAM users and user groups
+- Inspected IAM policies as applied to the pre-created user groups
+- Added users to user groups with specific capabilities active
+- Located and used the IAM sign-in URL
+- Experimented with the effects of policies on service access
+
+Well done on gaining practical experience with AWS Identity and Access Management (IAM). This knowledge will be valuable as you continue to work with AWS services and manage user access and permissions.
