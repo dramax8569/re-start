@@ -86,7 +86,9 @@ In this task, you will explore the pre-created users and user groups in IAM.
 14. Go to the "Groups" tab. You'll notice that user-1 is not a member of any user groups. User groups consist of multiple users who need access to the same resources. By assigning privileges to the group, you can efficiently manage permissions for multiple users.
 
 15. Switch to the "Security credentials" tab. Here, you can see that user-1 has been assigned a Console password.
+
 [![6.png](https://i.postimg.cc/85qGfyW1/6.png)](https://postimg.cc/34CVPFn6)
+
 16. In the left navigation pane, select "User groups." You will find the following user groups already created for you:
     - EC2-Admin
     - EC2-Support
@@ -97,7 +99,9 @@ In this task, you will explore the pre-created users and user groups in IAM.
 18. Navigate to the "Permissions" tab. The EC2-Support group has a managed policy called "AmazonEC2ReadOnlyAccess" associated with it. Managed policies are pre-defined policies that can be attached to IAM users and user groups. When a policy is updated, the changes apply immediately to all users and groups with that policy attached.
 
 19. Click on the plus sign next to the "AmazonEC2ReadOnlyAccess" policy to view its details. IAM policies consist of statements that specify allowed or denied actions for AWS resources. This particular policy grants permissions to list and describe information related to Amazon Elastic Compute Cloud (EC2), Elastic Load Balancing (ELB), Amazon CloudWatch, and Amazon EC2 Auto Scaling. These permissions allow users to view resources without making modifications.
-----------------------7
+
+[![7.png](https://i.postimg.cc/wvtHvK1f/7.png)](https://postimg.cc/r0L7nPCx)
+
 20. Go back to the left navigation pane and select "User groups" again.
 
 21. Now, choose the "S3-Support" group.
@@ -105,7 +109,9 @@ In this task, you will explore the pre-created users and user groups in IAM.
 22. Access the "Permissions" tab for this group. The "S3-Support" group has the "AmazonS3ReadOnlyAccess" policy attached.
 
 23. Click on the plus sign next to the "AmazonS3ReadOnlyAccess" policy to reveal its details. This policy grants permissions to get and list resources within Amazon S3.
-----------------------8
+
+[![8.png](https://i.postimg.cc/PqVTTf5v/8.png)](https://postimg.cc/nsm61J7n)
+
 24. Return to the left navigation pane and select "User groups" once more.
 
 25. Choose the "EC2-Admin" group.
@@ -114,7 +120,7 @@ In this task, you will explore the pre-created users and user groups in IAM.
 
 27. Click on the plus sign next to the "EC2-Admin-Policy" policy to view its details. This policy grants permissions to view (Describe) information about Amazon EC2 and also provides the ability to start and stop EC2 instances.
 
-----------------------9
+[![9.png](https://i.postimg.cc/25SrsLrf/9.png)](https://postimg.cc/zy6sWByd)
 
 ## Summary of Task 2
 
@@ -174,21 +180,27 @@ You can ignore any not authorized errors that appear during this task. They are 
 40. Choose the Users tab.
 41. In the Users tab, choose Add users.
  
- ----------------------10
+[![10.png](https://i.postimg.cc/FsXm9BNp/10.png)](https://postimg.cc/BtpRpN8P)
  
 42. In the Add users to S3-Support window, configure the following options:
    - Select the check box for user-1.
    - Choose Add Users.
- ----------------------11
+
+[![11.png](https://i.postimg.cc/65VKTfQX/11.png)](https://postimg.cc/rKp3PWWn)
+
 43. In the Users tab, you see that user-1 has been added to the group.
- ----------------------12
+
+[![12.png](https://i.postimg.cc/qvkTK6tC/12.png)](https://postimg.cc/JGdvVn51)
+
 ### Add user-2 to the EC2-Support group
 
 You have hired user-2 into a role where they provide support for Amazon EC2.
 
 43. Using the previous steps in this task, add user-2 to the EC2-Support group.
    - user-2 should now be part of the EC2-Support group.
- ----------------------13
+
+[![13.png](https://i.postimg.cc/kgfdvM8Y/13.png)](https://postimg.cc/bZDMzhm1)
+
 ### Add user-3 to the EC2-Admin group
 
 You have hired user-3 as your Amazon EC2 administrator to manage your EC2 instances.
@@ -196,11 +208,14 @@ You have hired user-3 as your Amazon EC2 administrator to manage your EC2 instan
 44. Using the previous steps in this task, add user-3 to the EC2-Admin group.
    - user-3 should now be part of the EC2-Admin group.
 
- ----------------------14
+[![14.png](https://i.postimg.cc/26BRY4tg/14.png)](https://postimg.cc/KkFsrgx5)
+
 45. In the left navigation pane, choose User groups.
    - Each group should have a 1 in the Users column for the number of users in each group.
    - If there is not a 1 beside each group, revisit the previous instructions in this task to confirm that each user is assigned to a group as shown in the table at the beginning of the Business scenario section.
- ----------------------15
+
+[![15.png](https://i.postimg.cc/FK65wPTj/15.png)](https://postimg.cc/d7Gxy9P1)
+
 ### Summary of task 3
 
 In this task, you added all the associated users to the user groups.
@@ -245,13 +260,17 @@ In this task, you test the permissions of each IAM user.
 51. Choose Sign in.
 
    If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
- ----------------------16
+
+[![16.png](https://i.postimg.cc/hvWFtXWv/16.png)](https://postimg.cc/5Y3KPNtW)
+
 52. From the Services menu, choose S3.
 
 53. Choose the name of one of your buckets, and browse the contents.
 
    Because your user is part of the S3-Support group in IAM, they have permission to view a list of S3 buckets and their contents.
- ----------------------17
+
+[![17.png](https://i.postimg.cc/gc8FBH8Z/17.png)](https://postimg.cc/Jtr2sJTr)
+
    Now, test whether they have access to Amazon EC2.
 
 54. From the Services menu, choose EC2.
@@ -259,14 +278,17 @@ In this task, you test the permissions of each IAM user.
 55. In the left navigation pane, choose Instances.
 
    You cannot see any instances. Instead, you see a message that says, You are not authorized to perform this operation. This message appears because your user has not been assigned any permissions to use Amazon EC2.
- ----------------------18
+
+[![18.png](https://i.postimg.cc/D0q9J7ng/18.png)](https://postimg.cc/dZVHgP7k)
+
    You now sign in as user-2, who has been hired as your Amazon EC2 support person.
 
 56. Sign user-1 out of the AWS Management Console by following these steps:
 
    - At the top of the screen, choose user-1.
    - Choose Sign out.
- ----------------------19
+
+[![19.png](https://i.postimg.cc/SKRbT0fS/19.png)](https://postimg.cc/75FRhWRd)
 
 57. Paste the Sign-in URL for IAM users in this account into your private window, and press Enter. This link should be in your text editor.
 
@@ -275,7 +297,9 @@ In this task, you test the permissions of each IAM user.
    - Password: Enter Lab-Password2
 
 59. Choose Sign in.
- ----------------------20
+
+[![20.png](https://i.postimg.cc/fTv4MWHW/20.png)](https://postimg.cc/dLDNBFPg)
+
    If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
 
 60. From the Services menu, choose EC2.
@@ -283,9 +307,12 @@ In this task, you test the permissions of each IAM user.
 61. In the left navigation pane, choose Instances.
 
    You are now able to see an EC2 instance because you have read-only permissions. However, you are not able to make any changes to Amazon EC2 resources.
- ----------------------21
+
+[![21.png](https://i.postimg.cc/4x4DyCM6/21.png)](https://postimg.cc/VdTGZhzv)
+
    If you cannot see an EC2 instance, then your Region may be incorrect. In the upper-right of the screen, choose the Region menu, and select the Region that you noted at the start of the lab (for example, Oregon).
- ----------------------22
+
+[![22.png](https://i.postimg.cc/9F253wYN/22.png)](https://postimg.cc/z3xPKBMn)
 
 Your EC2 instance should be selected. If it is not, choose it.
 
@@ -300,7 +327,7 @@ Your EC2 instance should be selected. If it is not, choose it.
 
 63. In the Stop instance? window, choose Stop.
 
-----------------------23
+[![23.png](https://i.postimg.cc/jjLB6HRC/23.png)](https://postimg.cc/v1wPb6gd)
 
 You receive an error that says, Failed to stop the instance. You are not authorized to perform this operation. This message demonstrates that the policy gives you permission to only view information and does not give you permission to make changes.
 
@@ -312,14 +339,15 @@ Next, check if user-2 can access Amazon S3.
 
 You receive an You don't have permissions to list buckets message because user-2 does not have permission to use Amazon S3.
 
-----------------------24
+[![24.png](https://i.postimg.cc/KYww01Yf/24.png)](https://postimg.cc/v170BHfx)
 
 You now sign in as user-3, who has been hired as your Amazon EC2 administrator.
 
 66. Sign user-2 out of the AWS Management Console by following these steps:
     * At the top of the screen, choose user-2.
     * Choose Sign out.
-----------------------25
+
+[![25.png](https://i.postimg.cc/13WLNChL/25.png)](https://postimg.cc/PCw6gMq4)
 
 67. Paste the Sign-in URL for IAM users in this account into your private window, and press Enter. If this link is not in your clipboard, retrieve it from the text editor where you pasted it earlier.
 
@@ -329,7 +357,7 @@ You now sign in as user-3, who has been hired as your Amazon EC2 administrator.
 
 69. Choose Sign in. If you see a dialog prompting you to switch to the new console home, choose Switch to the new Console Home.
 
-----------------------26
+[![26.png](https://i.postimg.cc/DZGDH7JT/26.png)](https://postimg.cc/ftwB0nf2)
 
 70. From the Services menu, choose EC2.
 
@@ -341,7 +369,7 @@ You now sign in as user-3, who has been hired as your Amazon EC2 administrator.
 
 74. Close your private window.
 
-----------------------27
+[![27.png](https://i.postimg.cc/Z5tkS7zm/27.png)](https://postimg.cc/svcHPJ2H)
 
 Summary of task 4
 In this task, you were able to sign in as all three users. You verified that user-1 was able to view S3 buckets but unable to view EC2 instances. You then signed in as user-2 and verified that they were able to view EC2 instances but unable to perform the stop instance action. user-2 was also unable to view S3 buckets. After signing in as user-3, you were able to view EC2 instances and perform the stop instance action.
