@@ -17,6 +17,8 @@ After completing this lab, you should be able to:
 
 Here is diagram of the current environment with the listed IAM users and IAM groups.
 
+[![1.jpg](https://i.postimg.cc/xTLfMStB/1.jpg)](https://postimg.cc/56NWWDcm)
+
 ## Other AWS services
 
 During this lab, you might receive error messages when performing actions beyond the steps in this lab. These messages will not impact your ability to complete the lab.
