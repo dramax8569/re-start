@@ -143,16 +143,10 @@ For the remainder of this lab, you will be working with a set of users and user 
 
 Your company is experiencing substantial growth in its use of AWS, utilizing numerous EC2 instances and a significant amount of Amazon S3 storage. To efficiently manage access for new staff members based on their job functions, you have the following requirements:
 
-1. **User:** user-1
-   - **In Group:** S3-Support
-   - **Permissions:** Read-only access to Amazon S3
-
-2. **User:** user-2
-   - **In Group:** EC2-Support
-   - **Permissions:** Read-only access to Amazon EC2
-
-3. **User:** user-3
-   - **In Group:** EC2-Admin
-   - **Permissions:** View, start, and stop EC2 instances
+| User    | In Group      | Permissions                               |
+| ------- | ------------- | ----------------------------------------- |
+| user-1  | S3-Support    | Read-only access to Amazon S3             |
+| user-2  | EC2-Support   | Read-only access to Amazon EC2            |
+| user-3  | EC2-Admin     | View, start, and stop EC2 instances       |
 
 This setup will allow you to tailor permissions to each user's specific responsibilities within your AWS environment.
