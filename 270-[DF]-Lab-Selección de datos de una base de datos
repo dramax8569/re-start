@@ -1,0 +1,24 @@
+# Selecting Data from a Database
+
+## Scenario
+The database operations team has created a relational database named "world" containing three tables: city, country, and countrylanguage. Based on specific use cases defined in the lab exercise, you will write a few queries using database operators and the SELECT statement.
+
+## Lab Overview and Objectives
+This lab demonstrates how to use some common database operators and the SELECT statement.
+
+After completing this lab, you should be able to:
+
+- Use the SELECT statement to query a database
+- Use the COUNT() function
+- Use the following operators to query a database:
+  - <
+  - >
+  - =
+  - WHERE
+  - ORDER BY
+  - AND
+
+When you start the lab, the following resources are already created for you.
+
+[![01.jpg](https://i.postimg.cc/sxGsWPsj/01.jpg)](https://postimg.cc/2LYsRZ1M)
+
