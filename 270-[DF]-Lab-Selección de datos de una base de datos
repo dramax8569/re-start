@@ -22,3 +22,12 @@ When you start the lab, the following resources are already created for you.
 
 [![01.jpg](https://i.postimg.cc/sxGsWPsj/01.jpg)](https://postimg.cc/2LYsRZ1M)
 
+A Command Host instance and world database containing three tables
+
+At the end of this lab, you will have used the SELECT statement and some common database operators:
+
+[![02.jpg](https://i.postimg.cc/5jc1SH2w/02.jpg)](https://postimg.cc/8fbq1zW5)
+
+A lab user is connected to a database instance. It also displays some commonly used database operations.
+
+Sample data in this course is taken from Statistics Finland, general regional statistics, February 4, 2022.
