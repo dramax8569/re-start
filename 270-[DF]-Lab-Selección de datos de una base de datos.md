@@ -12,7 +12,7 @@ After completing this lab, you should be able to:
 - Use the COUNT() function
 - Use the following operators to query a database:
   - <
-  - >
+  - ( > )
   - =
   - WHERE
   - ORDER BY
