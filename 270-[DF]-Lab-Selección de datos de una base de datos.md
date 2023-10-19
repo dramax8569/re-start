@@ -187,3 +187,18 @@ Query the country table to return a set of records based on the following questi
     ```
 
 [![12.png](https://i.postimg.cc/qM8gZ0Hk/12.png)](https://postimg.cc/ppL2pwd7)
+
+### Conclusion
+
+Congratulations! You have now successfully:
+
+- Used the SELECT statement to query a database
+- Used the COUNT() function
+- Used the following operators to query a database:
+  - `<`
+  - `>`
+  - `=`
+- Utilized the WHERE clause
+- Employed the ORDER BY clause
+- Combined conditions with the AND operator
+
