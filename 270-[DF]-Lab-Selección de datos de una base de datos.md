@@ -11,12 +11,12 @@ After completing this lab, you should be able to:
 - Use the SELECT statement to query a database
 - Use the COUNT() function
 - Use the following operators to query a database:
-  - ( < )
-  - ( > )
-  - =
-  - WHERE
-  - ORDER BY
-  - AND
+  - `<`
+  - `>`
+  - `=`
+  - `WHERE`
+  - `ORDER BY`
+  - `AND`
 
 When you start the lab, the following resources are already created for you.
 
