@@ -17,15 +17,15 @@ This lab takes approximately 45 minutes.
 Para completar el Desafío, realiza lo siguiente:
 
 5. Lanza una instancia de base de datos Amazon RDS utilizando los motores de base de datos Amazon Aurora Provisioned o MySQL. Toma nota de las credenciales de la base de datos, ya que se necesitarán en los pasos siguientes. Ten en cuenta las siguientes restricciones del laboratorio:
-- Motor de base de datos: Los motores admitidos son Amazon Aurora o MySQL. Amazon Aurora Serverless no está disponible.
-- Plantilla: Elige Dev/Test o la capa gratuita.
-- Disponibilidad y durabilidad: Evita crear una instancia en espera.
-- Tamaño de la instancia de la base de datos: Elige las clases con burst (db.t2 y db.t3) de tipo db.t*.micro a db.t*.medium.
-- Almacenamiento: Elige General Purpose SSD (gp2) de un tamaño de hasta 100 GB. El acceso a IOPS provisionados está restringido.
-- Amazon VPC: Utiliza el VPC del laboratorio.
-- Grupo de seguridad: Incluye un grupo de seguridad que permita que LinuxServer se conecte a la instancia de RDS.
-- Para MySQL, en Configuración adicional, habilita el monitoreo mejorado y deshabilita la opción.
-- Opciones de compra: Se permiten instancias bajo demanda. Otras opciones de compra están desactivadas.
+  - Motor de base de datos: Los motores admitidos son Amazon Aurora o MySQL. Amazon Aurora Serverless no está disponible.
+  - Plantilla: Elige Dev/Test o la capa gratuita.
+  - Disponibilidad y durabilidad: Evita crear una instancia en espera.
+  - Tamaño de la instancia de la base de datos: Elige las clases con burst (db.t2 y db.t3) de tipo db.t*.micro a db.t*.medium.
+  - Almacenamiento: Elige General Purpose SSD (gp2) de un tamaño de hasta 100 GB. El acceso a IOPS provisionados está restringido.
+  - Amazon VPC: Utiliza el VPC del laboratorio.
+  - Grupo de seguridad: Incluye un grupo de seguridad que permita que LinuxServer se conecte a la instancia de RDS.
+  - Para MySQL, en Configuración adicional, habilita el monitoreo mejorado y deshabilita la opción.
+  - Opciones de compra: Se permiten instancias bajo demanda. Otras opciones de compra están desactivadas.
 
 6. Haz clic en Detalles y luego en Mostrar.
 7. Haz clic en Descargar PEM (para Linux o macOS) o Descargar PPK (para Windows) según tu sistema operativo local.
