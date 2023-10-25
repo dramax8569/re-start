@@ -16,7 +16,6 @@ This lab takes approximately 45 minutes.
 ## Tu Desafío
 Para completar el Desafío, realiza lo siguiente:
 5. Lanza una instancia de base de datos Amazon RDS utilizando los motores de base de datos Amazon Aurora Provisioned o MySQL. Toma nota de las credenciales de la base de datos, ya que se necesitarán en los pasos siguientes. Ten en cuenta las siguientes restricciones del laboratorio:
-
 - Motor de base de datos: Los motores admitidos son Amazon Aurora o MySQL. Amazon Aurora Serverless no está disponible.
 - Plantilla: Elige Dev/Test o la capa gratuita.
 - Disponibilidad y durabilidad: Evita crear una instancia en espera.
@@ -33,7 +32,6 @@ Para completar el Desafío, realiza lo siguiente:
 9. Conéctate (SSH) al servidor LinuxServer utilizando los detalles que anotaste.
 10. Instala un cliente MySQL y úsalo para conectarte a tu base de datos. Alguna información útil está disponible aquí.
 11. Crea una tabla RESTART con las siguientes columnas. Captura la pantalla para la entrega.
-
 - ID de estudiante (Número)
 - Nombre del estudiante
 - Ciudad de reinicio
@@ -42,7 +40,6 @@ Para completar el Desafío, realiza lo siguiente:
 12. Inserta 10 filas de muestra en esta tabla. Captura la pantalla para la entrega.
 13. Selecciona todas las filas de esta tabla. Captura la pantalla para la entrega.
 14. Crea una tabla CLOUD_PRACTITIONER con las siguientes columnas. Captura la pantalla para la entrega.
-
 - ID de estudiante (Número)
 - Fecha de certificación (Fecha y hora)
   
