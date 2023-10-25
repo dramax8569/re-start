@@ -15,6 +15,7 @@ This lab takes approximately 45 minutes.
 
 ## Tu Desafío
 Para completar el Desafío, realiza lo siguiente:
+
 5. Lanza una instancia de base de datos Amazon RDS utilizando los motores de base de datos Amazon Aurora Provisioned o MySQL. Toma nota de las credenciales de la base de datos, ya que se necesitarán en los pasos siguientes. Ten en cuenta las siguientes restricciones del laboratorio:
 - Motor de base de datos: Los motores admitidos son Amazon Aurora o MySQL. Amazon Aurora Serverless no está disponible.
 - Plantilla: Elige Dev/Test o la capa gratuita.
