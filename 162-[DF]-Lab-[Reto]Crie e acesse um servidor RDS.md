@@ -33,16 +33,16 @@ Para completar el Desafío, realiza lo siguiente:
 9. Conéctate (SSH) al servidor LinuxServer utilizando los detalles que anotaste.
 10. Instala un cliente MySQL y úsalo para conectarte a tu base de datos. Alguna información útil está disponible aquí.
 11. Crea una tabla RESTART con las siguientes columnas. Captura la pantalla para la entrega.
-- ID de estudiante (Número)
-- Nombre del estudiante
-- Ciudad de reinicio
-- Fecha de graduación (Fecha y hora)
+      - ID de estudiante (Número)
+      - Nombre del estudiante
+      - Ciudad de reinicio
+      - Fecha de graduación (Fecha y hora)
   
 12. Inserta 10 filas de muestra en esta tabla. Captura la pantalla para la entrega.
 13. Selecciona todas las filas de esta tabla. Captura la pantalla para la entrega.
 14. Crea una tabla CLOUD_PRACTITIONER con las siguientes columnas. Captura la pantalla para la entrega.
-- ID de estudiante (Número)
-- Fecha de certificación (Fecha y hora)
+      - ID de estudiante (Número)
+      - Fecha de certificación (Fecha y hora)
   
 15. Inserta 5 filas de muestra en esta tabla. Captura la pantalla para la entrega.
 16. Selecciona todas las filas de esta tabla. Captura la pantalla para la entrega.
