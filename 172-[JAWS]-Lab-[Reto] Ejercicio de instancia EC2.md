@@ -16,6 +16,21 @@ El tiempo estimado para completar este laboratorio es de aproximadamente 55 minu
     - Configure la instancia y cree los recursos necesarios para permitirle conectarse a ella mediante SSH.
     - Tome una captura de pantalla del registro del sistema de la instancia EC2 que muestre que el servicio httpd se instaló correctamente.
 
+[![1.png](https://i.postimg.cc/zXXDzxPC/1.png)](https://postimg.cc/JtvCK580)
+
+[![2.png](https://i.postimg.cc/13896fS4/2.png)](https://postimg.cc/LJMKF4nM)
+
+[![3.png](https://i.postimg.cc/ZnJbyHYh/3.png)](https://postimg.cc/ph1bwDn0)
+
+[![4.png](https://i.postimg.cc/441NRDw4/4.png)](https://postimg.cc/6TyNd1DF)
+
+[![5.png](https://i.postimg.cc/BQYSX2dd/5.png)](https://postimg.cc/SJ9FPYQr)
+
+[![6.png](https://i.postimg.cc/1XM90F4V/6.png)](https://postimg.cc/ZvBt4C8J)
+
+[![7.png](https://i.postimg.cc/t4Jg5B3q/7.png)](https://postimg.cc/NKhYG7CS)
+
+
 *Pruebe su servidor web mediante la implementación de la página web sencilla que aparece a continuación:
     - Abra una sesión SSH en la instancia de EC2.
     - Abra un editor de texto y copie y pegue el siguiente código HTML:
@@ -31,13 +46,13 @@ El tiempo estimado para completar este laboratorio es de aproximadamente 55 minu
     </html>
     ```
 
-*Reemplace YOUR-NAME con su nombre y guarde el archivo como projects.html.
+- Reemplace YOUR-NAME con su nombre y guarde el archivo como projects.html.
 
-*Coloque este archivo en el directorio /var/www/html de su instancia EC2.
+- Coloque este archivo en el directorio /var/www/html de su instancia EC2.
 
-*Abra un navegador web y navegue hasta esta página web de ejemplo. Tome una captura de pantalla que muestre que la página se devolvió y se muestra correctamente.
+- Abra un navegador web y navegue hasta esta página web de ejemplo. Tome una captura de pantalla que muestre que la página se devolvió y se muestra correctamente.
 
-*Envíe las capturas de pantalla que tomó a su instructor.
+- Envíe las capturas de pantalla que tomó a su instructor.
 
 **Sugerencias:**
 
