@@ -23,6 +23,16 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 2. Report the word count in an email by using an SNS topic. Optionally, also send the result in an SMS (text) message.
 
+[![1.png](https://i.postimg.cc/JzZNpB3W/1.png)](https://postimg.cc/LJ4gX50y)
+
+[![2.png](https://i.postimg.cc/XvgwbSDH/2.png)](https://postimg.cc/3ydyX6hm)
+
+[![3.png](https://i.postimg.cc/VNwjpL40/3.png)](https://postimg.cc/w1WyszC9)
+
+[![4.png](https://i.postimg.cc/76s0514S/4.png)](https://postimg.cc/BLFXyKXv)
+
+[![5.png](https://i.postimg.cc/RFVwCskM/5.png)](https://postimg.cc/QBwF0bNP)
+
 3. Format the response message as follows:
 
    "The word count in the <textFileName> file is nnn."
@@ -31,11 +41,47 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 4. Enter the following text as the email subject: Word Count Result
 
-5. Automatically invoke the function when the text file is uploaded to an S3 bucket.
+   ```
+      import json
+      import boto3
+      
+      def lambda_handler(event, context):
+          # Obtiene el nombre del archivo de texto desde el evento de S3
+          text_file_name = event['Records'][0]['s3']['object']['key']
+         
+          # Inicializa el cliente de S3 y SNS
+          s3_client = boto3.client('s3')
+          sns_client = boto3.client('sns')
+      
+          # Descarga el archivo de texto desde S3
+          response = s3_client.get_object(Bucket='bucket-1-christian', Key=text_file_name)
+          text_content = response['Body'].read().decode('utf-8')
+      
+          # Cuenta las palabras en el archivo de texto
+          word_count = len(text_content.split())
+      
+          # Formatea el mensaje de respuesta
+          response_message = f"El recuento de palabras en el archivo {text_file_name} es {word_count}."
+          print(f"El recuento de palabras en el archivo {text_file_name} es {word_count}.")
+      
+          # Publica el mensaje en un tema de SNS
+          sns_client.publish(
+              TopicArn='arn:aws:sns:us-west-2:095562198387:tema-1',
+              Subject='Resultado del recuento de palabras',
+              Message=response_message
+          )
+      
+          return {
+              'statusCode': 200,
+              'body': json.dumps('Conteo de palabras completado.')
+          }
+   ```
 
-6. Test the function by uploading a few sample text files with different word counts to the S3 bucket.
+6. Automatically invoke the function when the text file is uploaded to an S3 bucket.
 
-7. Forward the email that one of your tests produces and a screenshot of your Lambda function to your instructor.
+7. Test the function by uploading a few sample text files with different word counts to the S3 bucket.
+
+8. Forward the email that one of your tests produces and a screenshot of your Lambda function to your instructor.
 
 ## Hints
 
