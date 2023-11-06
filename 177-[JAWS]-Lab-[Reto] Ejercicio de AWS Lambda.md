@@ -81,7 +81,11 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 7. Test the function by uploading a few sample text files with different word counts to the S3 bucket.
 
+
+
 8. Forward the email that one of your tests produces and a screenshot of your Lambda function to your instructor.
+
+[![6.png](https://i.postimg.cc/vZrPcKN9/6.png)](https://postimg.cc/ZWqPQwZK)
 
 ## Hints
 
