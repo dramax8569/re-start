@@ -21,6 +21,12 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 1. Use the AWS Management Console to develop a Lambda function in Python and create the function's required resources.
 
+[![bucket-1.png](https://i.postimg.cc/DZpW528G/bucket-1.png)](https://postimg.cc/62R5pxV6)
+
+[![desencadenador.png](https://i.postimg.cc/VvSJV3CV/desencadenador.png)](https://postimg.cc/vxs812Xr)
+
+[![desencadenador1.png](https://i.postimg.cc/HnfrDB0s/desencadenador1.png)](https://postimg.cc/FkVr0bn2)
+
 2. Report the word count in an email by using an SNS topic. Optionally, also send the result in an SMS (text) message.
 
 [![1.png](https://i.postimg.cc/JzZNpB3W/1.png)](https://postimg.cc/LJ4gX50y)
