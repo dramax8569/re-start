@@ -91,7 +91,7 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 [![2.png](https://i.postimg.cc/28kk3pyR/2.png)](https://postimg.cc/Z0QtDM6V)
 
-[![5.png](https://i.postimg.cc/52GbP63b/5.png)](https://postimg.cc/FYjMzF8B)
+
 
 -----------
 
@@ -99,11 +99,13 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 [![3.png](https://i.postimg.cc/4NWJ98HK/3.png)](https://postimg.cc/svZdF4cy)
 
-[![4.png](https://i.postimg.cc/kgD7FxWT/4.png)](https://postimg.cc/qNVfp6bK)
+
 
 8. Forward the email that one of your tests produces and a screenshot of your Lambda function to your instructor.
 
-[![6.png](https://i.postimg.cc/vZrPcKN9/6.png)](https://postimg.cc/ZWqPQwZK)
+[![5.png](https://i.postimg.cc/52GbP63b/5.png)](https://postimg.cc/FYjMzF8B)
+
+[![4.png](https://i.postimg.cc/kgD7FxWT/4.png)](https://postimg.cc/qNVfp6bK)
 
 ## Hints
 
