@@ -39,6 +39,8 @@ Create a Lambda function to count the number of words in a text file. The genera
 
 [![5.png](https://i.postimg.cc/RFVwCskM/5.png)](https://postimg.cc/QBwF0bNP)
 
+[![6.png](https://i.postimg.cc/nLcSQk7L/6.png)](https://postimg.cc/w1ZQCDwK)
+
 3. Format the response message as follows:
 
    "The word count in the <textFileName> file is nnn."
