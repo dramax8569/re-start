@@ -10,7 +10,7 @@ This lab provides an environment for creating an Amazon VPC and an Amazon EC2 in
 
 Build and test the lab, iterating the solution until all components are successfully created. Inform the instructor when the template builds without errors so they can review the completed solution.
 
-    ```
+
         # Lab VPC with Private subnet and Internet Gateway
         
         Parameters:
@@ -141,5 +141,4 @@ Build and test the lab, iterating the solution until all components are successf
         
           LabVPCDefaultSecurityGroup:
             Value: !Sub ${LabVPC.DefaultSecurityGroup}
-    
-    ```
+
