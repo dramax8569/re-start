@@ -162,7 +162,7 @@ Build and test the lab, iterating the solution until all components are successf
             Value: !Sub ${LabVPC.DefaultSecurityGroup}
 
 
-## Upload file .yaml to CloudFormation
+## Uploading .yaml file to CloudFormation
 
 [![1.png](https://i.postimg.cc/bwYMxB0H/1.png)](https://postimg.cc/N5VpYbz5)
 
