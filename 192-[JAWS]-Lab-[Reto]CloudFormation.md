@@ -1,4 +1,4 @@
-# AWS re/Start Challenge Lab - Using AWS CloudFormation to Create an AWS VPC and Amazon EC2 Instance
+# AWS re/Start Challenge Lab - Using AWS CloudFormation to Create an AWS VPC and Amazon EC2 Instance!!!!
 
 ## Lab Overview
 This lab provides an environment for creating an Amazon VPC and an Amazon EC2 instance (along with other supporting elements) using an AWS CloudFormation template. The goal of this lab is to create a CloudFormation template with the following components:
