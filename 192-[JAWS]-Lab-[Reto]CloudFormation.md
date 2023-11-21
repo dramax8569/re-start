@@ -27,6 +27,8 @@ This lab provides an environment for creating an Amazon VPC and an Amazon EC2 in
 
 Build and test the lab, iterating the solution until all components are successfully created. Inform the instructor when the template builds without errors so they can review the completed solution.
 
+## This is a yaml file
+
         # .yaml
         # Lab VPC with Private subnet and Internet Gateway
         
@@ -160,7 +162,7 @@ Build and test the lab, iterating the solution until all components are successf
             Value: !Sub ${LabVPC.DefaultSecurityGroup}
 
 
-## Upload file .yaml
+## Upload file .yaml to CloudFormation
 
 [![1.png](https://i.postimg.cc/bwYMxB0H/1.png)](https://postimg.cc/N5VpYbz5)
 
